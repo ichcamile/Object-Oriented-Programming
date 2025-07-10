@@ -2,6 +2,7 @@ package br.com.fecaf;
 
 import br.com.fecaf.model.Circulo;
 import br.com.fecaf.model.Retangulo;
+import br.com.fecaf.model.Triangle;
 
 public class geometriaApp {
     public static void main(String[] args) {
@@ -40,5 +41,30 @@ public class geometriaApp {
         circulo1.calcular_area();
         circulo1.calcular_perimetro();
         System.out.println("=================================================\n");
+
+        // Instaciando o objeto triangulo;
+
+        Triangle triangulo1 = new Triangle();
+
+        triangulo1.nome = "Triangle One";
+        triangulo1.base = 12;
+        triangulo1.cateto1 = 9;
+        triangulo1.cateto2 = 15;
+        triangulo1.altura = 8;
+
+       boolean validarTriangulo = triangulo1.validarTriangulo();
+
+       if (validarTriangulo){
+           triangulo1.exibirInformacoes();
+           triangulo1.calcularAreaTriangle();
+           triangulo1.calcularPerimetroTriangle();
+           triangulo1.validarTriangulo();
+           triangulo1.definirTriangleRectangle();
+       }
+
+
+
+
+
     }
 }
